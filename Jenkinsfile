@@ -19,9 +19,9 @@ pipeline
         {
             steps
             {
-              sh 'scp /var/lib/jenkins/workspace/Declarativepipeline/webapp/target/webapp.war \
-azureuser@74.179.96.25:/var/lib/tomcat10/webapps/Dectestapp.war
-'
+    sh 'scp /var/lib/jenkins/workspace/Declarativepipeline/webapp/target/webapp.war \
+azureuser@74.179.96.25:/var/lib/tomcat10/webapps/Dectestapp.war'
+
             }
         }
         stage('Continuoustesting')
