@@ -36,8 +36,8 @@ azureuser@74.179.96.25:/var/lib/tomcat10/webapps/Dectestapp.war'
         {
             steps
             {
-                sh '''scp /var/lib/jenkins/workspace/Declarativepipeline/webapp/target/webapp.war \azureuser@20.81.224.134:/var/lib/tomcat10/webapps/Decprodapp.war'''
+                
+        sh 'scp /var/lib/jenkins/workspace/Declarativepipeline/webapp/target/webapp.war azureuser@20.81.224.134:/var/lib/tomcat10/webapps/Decprodapp.war'
             }
-        }
     }
 }
