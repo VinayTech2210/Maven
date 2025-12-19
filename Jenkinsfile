@@ -19,7 +19,7 @@ pipeline
         {
             steps
             {
-                sh 'scp /var/lib/jenkins/workspace/Declarativepipeline/webapp/target/webapp.war azureuser@74.179.96.25:var/lib/tomcat10/webapps/testapp.war'
+                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'c0bd6fb5-41b6-4c37-ac4a-07f146b25b33', path: '', url: 'http://74.179.96.25:8080')], contextPath: 'Dectestapp', war: '**/*.war'
             }
         }
         stage('Continuoustesting')
