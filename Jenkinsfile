@@ -36,7 +36,7 @@ azureuser@74.179.96.25:/var/lib/tomcat10/webapps/Dectestapp.war'
         {
             steps
             {
-                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'c0bd6fb5-41b6-4c37-ac4a-07f146b25b33', path: '', url: 'http://20.81.224.134:8080')], contextPath: 'Decprodapp', war: '**/*.war'
+                sh 'scp /var/lib/jenkins/workspace/Declarativepipeline/webapp/target/webapp.war \azureuser@20.81.224.134:/var/lib/tomcat10/webapps/Decprodapp.war'
             }
         }
     }
